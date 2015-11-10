@@ -1,4 +1,6 @@
 StoreEngine::Application.configure do
+  config.action_mailer.delivery_method = :smtp
+  config.action_mailer.smtp_settings = { :address => "127.0.0.1", :port => 1025 }
   # Settings specified here will take precedence over those in config/application.rb
 
   # The test environment is used exclusively to run your application's

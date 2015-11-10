@@ -8,6 +8,19 @@ describe UsersController do
     end
   end
 
+  describe "#create" do
+    it "sends an email" do
+      data = {
+        full_name: 'Billie Holiday',
+        email: 'billie@example.com',
+        display_name: 'billie',
+        password: 'poet',
+        password_confirmation: 'poet'
+      }
+      post :create, user: data
+    end
+  end
+
   describe "GET#show" do
     context 'when a user is logged in' do
 
